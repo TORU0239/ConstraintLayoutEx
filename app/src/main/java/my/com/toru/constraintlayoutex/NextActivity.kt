@@ -1,8 +1,8 @@
 package my.com.toru.constraintlayoutex
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.elements_for_constraint.*
 
 class NextActivity : AppCompatActivity() {
 
@@ -10,6 +10,15 @@ class NextActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_second)
 
-        Log.w("Toru", "ProxyTest result : ${ProxyTest().testRunProxy()}")
+        btn_chain.setOnClickListener{
+
+        }
+
+        btn_guide.setOnClickListener {
+
+        }
+
+        btn_dimension.setOnClickListener {
+        }
     }
 }
