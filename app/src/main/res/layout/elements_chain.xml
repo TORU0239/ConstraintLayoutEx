@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chain_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/chained_text1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Chained Text 1"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@id/chained_text2"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/chained_text2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Chained Text 2"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/chained_text1"
+        app:layout_constraintEnd_toStartOf="@id/chained_text3"/>
+
+    <TextView
+        android:id="@+id/chained_text3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Chained Text 3"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/chained_text2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <!-- spread -->
+
+    <TextView
+        android:id="@+id/chained_spread_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Spread Text 1"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/chained_text1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chained_spread_text2"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <TextView
+        android:id="@+id/chained_spread_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Spread Text 2"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintTop_toBottomOf="@id/chained_text1"
+        app:layout_constraintStart_toEndOf="@id/chained_spread_text1"
+        app:layout_constraintEnd_toStartOf="@id/chained_spread_text3"/>
+
+    <TextView
+        android:id="@+id/chained_spread_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Spread Text 3"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintTop_toBottomOf="@id/chained_text1"
+        app:layout_constraintStart_toEndOf="@id/chained_spread_text2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
